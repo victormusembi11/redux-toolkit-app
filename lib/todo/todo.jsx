@@ -1,7 +1,7 @@
 import defaultFetch from "@/pages/api/axios/axios";
 
 async function getTodoById(id) {
-  const response = await defaultFetch("/todos/1");
+  const response = await defaultFetch(`/todos/${id}`);
 
   if (response.status === 200) {
     return response.data;
